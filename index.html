@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDelight - Đặt Đồ Ăn Sinh Viên Hòa Lạc</title>
+    <link rel="stylesheet" href="styles.css?v=9.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-utensils logo-icon"></i>
+                <span class="logo-text">FoodHòaLạc</span>
+            </div>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#menu-section" class="active">Thực đơn</a></li>
+                    <li><a href="#tracking-section">Theo dõi đơn</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" id="cart-toggle-btn" class="btn btn-cart" aria-label="Xem giỏ hàng">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+                <button type="button" id="login-modal-btn" class="btn btn-primary">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Đăng nhập</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>ĐỒ ĂN SINH VIÊN HÒA LẠC CẤP TỐC</h1>
+                <p>Nạp năng lượng cày deadline - Ship tận KTX & Các cổng trường!</p>
+            </div>
+
+            <div class="filter-bar">
+                <button type="button" class="btn-filter active" data-category="all">Tất cả món</button>
+                <button type="button" class="btn-filter" data-category="main">🍜 Mì & Cơm</button>
+                <button type="button" class="btn-filter" data-category="snack">🥖 Ăn vặt</button>
+                <button type="button" class="btn-filter" data-category="drink">🧋 Đồ uống</button>
+            </div>
+        </section>
+
+        <!-- MENU SECTION -->
+        <section id="menu-section" class="menu-section">
+            <h2>Món Ngon "Cứu Đói" Hôm Nay</h2>
+            <div class="food-grid" id="food-grid">
+                
+                <!-- MÓN 1: MÌ TÔM XÀO -->
+                <article class="food-card">
+                    <img src="https://images.unsplash.com/photo-1612927601601-6638404737ce?w=400" alt="Mì Tôm Xào Trứng Bò">
+                    <div class="food-card-body">
+                        <h3>Mì Tôm Xào Trứng Bò Cấp Tốc</h3>
+                        <p class="description">Mì tôm xào rau cải, kèm 1 trứng ốp la & thịt bò mềm thơm.</p>
+                        <div class="food-card-footer">
+                            <span class="price">25.000đ</span>
+                            <button type="button" class="btn btn-add-cart" aria-label="Thêm Mì Tôm Xào Trứng Bò vào giỏ hàng">
+                                + Thêm món
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MÓN 2: CƠM RANG -->
+                <article class="food-card">
+                    <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400" alt="Cơm Rang Dưa Bò">
+                    <div class="food-card-body">
+                        <h3>Cơm Rang Dưa Bò Giòn Rụm</h3>
+                        <p class="description">Cơm rang vàng giòn, dưa chua xào thịt bò đậm đà chuẩn vị.</p>
+                        <div class="food-card-footer">
+                            <span class="price">30.000đ</span>
+                            <button type="button" class="btn btn-add-cart" aria-label="Thêm Cơm Rang Dưa Bò vào giỏ hàng">
+                                + Thêm món
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MÓN 3: BÁNH MÌ -->
+                <article class="food-card">
+                    <img src="https://images.unsplash.com/photo-1626844131082-256783844137?w=400" alt="Bánh Mì Thập Cẩm">
+                    <div class="food-card-body">
+                        <h3>Bánh Mì Thập Cẩm Đầy Đặn</h3>
+                        <p class="description">Bánh mì giòn rụm kẹp pate, xá xíu, chả lụa & dưa góp.</p>
+                        <div class="food-card-footer">
+                            <span class="price">20.000đ</span>
+                            <button type="button" class="btn btn-add-cart" aria-label="Thêm Bánh Mì Thập Cẩm vào giỏ hàng">
+                                + Thêm món
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- MÓN 4: TRÀ TẮC -->
+                <article class="food-card">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400" alt="Trà Tắc Khổng Lồ">
+                    <div class="food-card-body">
+                        <h3>Trà Tắc Khổng Lồ Giải Nhiệt</h3>
+                        <p class="description">Ly 1 lít mát lạnh, thơm mùi tắc tươi giúp tỉnh táo học tập.</p>
+                        <div class="food-card-footer">
+                            <span class="price">15.000đ</span>
+                            <button type="button" class="btn btn-add-cart" aria-label="Thêm Trà Tắc Khổng Lồ vào giỏ hàng">
+                                + Thêm món
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ASIDE: BẢNG GIỎ HÀNG BÊN CẠNH -->
+        <aside id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h3>Giỏ đồ ăn của bạn</h3>
+                <button type="button" id="cart-close-btn" class="btn-close" aria-label="Đóng giỏ hàng">&times;</button>
+            </div>
+
+            <div class="cart-body" id="cart-items">
+                <p class="empty-cart-msg">Giỏ hàng đang trống.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-summary">
+                    <span>Tổng cộng:</span>
+                    <strong id="cart-total-price">0đ</strong>
+                </div>
+
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-group">
+                        <label for="student-name">Họ và tên sinh viên:</label>
+                        <input type="text" id="student-name" name="student_name" placeholder="Ví dụ: Trịnh Đình Thạch" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="student-id">Mã sinh viên:</label>
+                        <input type="text" id="student-id" name="student_id" placeholder="Ví dụ: 23110218" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="delivery-address">Địa chỉ nhận (KTX / Cổng VJU / HLU):</label>
+                        <input type="text" id="delivery-address" name="delivery_address" placeholder="Ví dụ: Cổng KTX Hòa Lạc" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-checkout">
+                        Xác nhận đặt hàng cấp tốc
+                    </button>
+                </form>
+            </div>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 FoodHòaLạc - Hệ thống đặt đồ ăn sinh viên Hòa Lạc. Thiết kế bởi Frontend Team.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<script src="script.js?v=2.0"></script>
+</body>
+</html>
+
+<script src="script.js?v=9.0"></script>
+
